@@ -40,11 +40,10 @@ function clearDataCountryInfo() {
 }
 
 function markupSearchList(searchCountries) {
-  console.log(searchCountries);
   const markupList = searchCountries
     .map(({ name, flags }) => {
       return `
-            <li style='display: flex; align-items: center;'>
+            <li style='display: flex; align-items: center; margin-bottom: 5px;'>
                 <img src="${flags.svg}"  alt="Country Flag" width='40' height='30'>
                 <span>&nbsp${name.official}</span>
             </li>`;
@@ -59,7 +58,7 @@ function markupCountryInfo(searchCountries) {
     .map(({ name, capital, population, flags, languages }) => {
       return `<img src="${flags.svg}" alt="Country Flag" width="40" height="30">
           <span style="
-    font-size: 36px; font-weight: 700">${name.official}</span>
+    font-size: 36px; font-weight: 700;">${name.official}</span>
           <p><b>Capital: </b>${capital}</p>
           <p><b>Population: </b>${population}</p>
           <p><b>Languages: </b>${Object.values(languages).join(', ')}</p>`;
