@@ -3,7 +3,7 @@ import debounce from 'lodash.debounce';
 import Notiflix from 'notiflix';
 import { fetchCountries } from './fetchCountries.js';
 export { refs };
-const DEBOUNCE_DELAY = 1300;
+const DEBOUNCE_DELAY = 300;
 
 const refs = {
   inputField: document.querySelector('input#search-box'),
